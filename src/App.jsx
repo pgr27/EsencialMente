@@ -1,15 +1,16 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import Banner from "./components/Banner";
+import Carrusel from "./components/Carrusel";
+import Home from "./components/Home";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   return (
-    <div>
+    <>
       <Navbar />
-      <div>
-        <Banner />
-      </div>
-    </div>
+      <Carrusel />
+      <Home />
+    </>
   );
 };
 export default App;
