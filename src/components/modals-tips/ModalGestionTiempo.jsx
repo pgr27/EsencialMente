@@ -1,32 +1,35 @@
 import React, { useState } from "react";
-import { ModalGenerico } from "./ModalGenerico";
+import ModalGenerico from "../ModalGenerico";
 
-import tip1 from "../../html/tips/motivacion-mentalidad/tip1.html?raw";
-import tip2 from "../../html/tips/motivacion-mentalidad/tip2.html?raw";
-import tip3 from "../../html/tips/motivacion-mentalidad/tip3.html?raw";
-import tip4 from "../../html/tips/motivacion-mentalidad/tip4.html?raw";
+import tip1 from "../../html/tips/gestion-tiempo/tip1.html?raw";
+import tip2 from "../../html/tips/gestion-tiempo/tip2.html?raw";
+import tip3 from "../../html/tips/gestion-tiempo/tip3.html?raw";
+import tip4 from "../../html/tips/gestion-tiempo/tip4.html?raw";
+import tip5 from "../../html/tips/gestion-tiempo/tip5.html?raw";
 
-const ModalMotivacionMentalidad = () => {
+export const ModalGestionTiempo = () => {
   const [show, setShow] = useState(false);
   const [selectedTip, setSelectedTip] = useState(tip1);
 
   const tips = [
-    { label: "Define tu “por qué”", content: tip1 },
-    { label: "Micro-victorias", content: tip2 },
-    { label: "Visualiza tu meta y el proceso", content: tip3 },
-    { label: "Cambia el diálogo interno", content: tip4 },
+    { label: "Empieza el día con enfoque", content: tip1 },
+    { label: "Aplica la regla de los 2 minutos", content: tip2 },
+    { label: "Practica Time Blocking", content: tip3 },
+    { label: "Evita la multitarea", content: tip4 },
+    { label: "Usa descansos inteligentes (Pomodoro)", content: tip5 },
   ];
+
   return (
     <section className="tips-section">
       {/* Botón para abrir el modal */}
       <button className="open-modal-btn" onClick={() => setShow(true)}>
-        Motivación y Mentalidad
+        Gestión del Tiempo
       </button>
 
       <ModalGenerico
         show={show}
         handleClose={() => setShow(false)}
-        title="Motivación y Mentalidad"
+        title="Gestión del Tiempo"
         body={
           <div className="html-content">
             <div className="tip-buttons">
@@ -50,5 +53,4 @@ const ModalMotivacionMentalidad = () => {
     </section>
   );
 };
-
-export default ModalMotivacionMentalidad;
+export default ModalGestionTiempo;

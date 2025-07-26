@@ -1,6 +1,6 @@
 import { Modal, Button } from "react-bootstrap";
 
-export function ModalGenerico({ show, handleClose, title, body, selectedTip }) {
+const ModalGenerico = ({ show, handleClose, title, body, selectedTip }) => {
   return (
     <Modal show={show} onHide={handleClose} centered>
       <Modal.Header closeButton>
@@ -14,4 +14,5 @@ export function ModalGenerico({ show, handleClose, title, body, selectedTip }) {
       </Modal.Footer>
     </Modal>
   );
-}
+};
+export default ModalGenerico;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ModalGenerico } from "./ModalGenerico";
+import ModalGenerico from "../ModalGenerico";
 
 import tip1 from "../../html/tips/habitos-saludables/tip1.html?raw";
 import tip2 from "../../html/tips/habitos-saludables/tip2.html?raw";

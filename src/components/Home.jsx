@@ -1,7 +1,6 @@
 import "../App.css";
 import Tips from "./Tips";
 import Planificador from "./Planificador";
-import Recomendaciones from "./Recomendaciones";
 import Finanzas from "./Finanzas";
 
 const Home = () => {
@@ -11,12 +10,9 @@ const Home = () => {
       <section id="inicio">Inicio</section>
       <section>
         <Tips />
-      </section>
+      </section>{" "}
       <section>
         <Planificador />
-      </section>
-      <section>
-        <Recomendaciones />
       </section>
       <section>
         <Finanzas />

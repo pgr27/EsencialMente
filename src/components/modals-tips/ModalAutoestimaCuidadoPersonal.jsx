@@ -1,37 +1,35 @@
 import React, { useState } from "react";
-import { ModalGenerico } from "./ModalGenerico";
+import ModalGenerico from "../ModalGenerico";
 
-import tip1 from "../../html/tips/estudio-efectivo/tip1.html?raw";
-import tip2 from "../../html/tips/estudio-efectivo/tip2.html?raw";
-import tip3 from "../../html/tips/estudio-efectivo/tip3.html?raw";
-import tip4 from "../../html/tips/estudio-efectivo/tip4.html?raw";
-import tip5 from "../../html/tips/estudio-efectivo/tip5.html?raw";
-import tip6 from "../../html/tips/estudio-efectivo/tip6.html?raw";
+import tip1 from "../../html/tips/autoestima-cuidado-personal/tip1.html?raw";
+import tip2 from "../../html/tips/autoestima-cuidado-personal/tip2.html?raw";
+import tip3 from "../../html/tips/autoestima-cuidado-personal/tip3.html?raw";
+import tip4 from "../../html/tips/autoestima-cuidado-personal/tip4.html?raw";
+import tip5 from "../../html/tips/autoestima-cuidado-personal/tip5.html?raw";
 
-export const ModalEstudioEfectivo = () => {
+const ModalAutoestimaCuidadoPersonal = () => {
   const [show, setShow] = useState(false);
   const [selectedTip, setSelectedTip] = useState(tip1);
 
   const tips = [
-    { label: "Planifica tu sesión", content: tip1 },
-    { label: "Elimina distracciones digitales", content: tip2 },
-    { label: "Estudia en bloques temáticos (Batching)", content: tip3 },
-    { label: "Revisión activa", content: tip4 },
-    { label: "Metas pequeñas y medibles", content: tip5 },
-    { label: "Mapas mentales", content: tip6 },
+    { label: "Dedicate tiempo todos los días", content: tip1 },
+    { label: "Aprende a decir NO", content: tip2 },
+    { label: "Cuida tu cuerpo", content: tip3 },
+    { label: "Practica la gratitud diaria", content: tip4 },
+    { label: "Habla contigo", content: tip5 },
   ];
 
   return (
     <section className="tips-section">
       {/* Botón para abrir el modal */}
       <button className="open-modal-btn" onClick={() => setShow(true)}>
-        Estudio Efectivo
+        Autoestima y Cuidado Personal
       </button>
 
       <ModalGenerico
         show={show}
         handleClose={() => setShow(false)}
-        title="Estudio Efectivo"
+        title="Autoestima y Cuidado Personal"
         body={
           <div className="html-content">
             <div className="tip-buttons">
@@ -55,4 +53,4 @@ export const ModalEstudioEfectivo = () => {
     </section>
   );
 };
-export default ModalEstudioEfectivo;
+export default ModalAutoestimaCuidadoPersonal;

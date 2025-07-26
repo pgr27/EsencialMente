@@ -1,32 +1,37 @@
 import React, { useState } from "react";
-import { ModalGenerico } from "./ModalGenerico";
-import tip1 from "../../html/tips/proyectos-personales/tip1.html?raw";
-import tip2 from "../../html/tips/proyectos-personales/tip2.html?raw";
-import tip3 from "../../html/tips/proyectos-personales/tip3.html?raw";
-import tip4 from "../../html/tips/proyectos-personales/tip4.html?raw";
+import ModalGenerico from "../ModalGenerico";
 
-const ModalProyectosPersonales = () => {
+import tip1 from "../../html/tips/estudio-efectivo/tip1.html?raw";
+import tip2 from "../../html/tips/estudio-efectivo/tip2.html?raw";
+import tip3 from "../../html/tips/estudio-efectivo/tip3.html?raw";
+import tip4 from "../../html/tips/estudio-efectivo/tip4.html?raw";
+import tip5 from "../../html/tips/estudio-efectivo/tip5.html?raw";
+import tip6 from "../../html/tips/estudio-efectivo/tip6.html?raw";
+
+export const ModalEstudioEfectivo = () => {
   const [show, setShow] = useState(false);
   const [selectedTip, setSelectedTip] = useState(tip1);
 
   const tips = [
-    { label: "Empieza pequeño, pero empieza ya", content: tip1 },
-    { label: "Conecta tu proyecto con otras personas", content: tip2 },
-    { label: "Documenta tu proceso desde el inicio", content: tip3 },
-    { label: "Establece un sistema", content: tip4 },
+    { label: "Planifica tu sesión", content: tip1 },
+    { label: "Elimina distracciones digitales", content: tip2 },
+    { label: "Estudia en bloques temáticos (Batching)", content: tip3 },
+    { label: "Revisión activa", content: tip4 },
+    { label: "Metas pequeñas y medibles", content: tip5 },
+    { label: "Mapas mentales", content: tip6 },
   ];
 
   return (
     <section className="tips-section">
       {/* Botón para abrir el modal */}
       <button className="open-modal-btn" onClick={() => setShow(true)}>
-        Proyectos Personales
+        Estudio Efectivo
       </button>
 
       <ModalGenerico
         show={show}
         handleClose={() => setShow(false)}
-        title="Proyectos Personales"
+        title="Estudio Efectivo"
         body={
           <div className="html-content">
             <div className="tip-buttons">
@@ -50,4 +55,4 @@ const ModalProyectosPersonales = () => {
     </section>
   );
 };
-export default ModalProyectosPersonales;
+export default ModalEstudioEfectivo;

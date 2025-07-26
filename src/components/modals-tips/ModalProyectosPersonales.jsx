@@ -1,35 +1,32 @@
 import React, { useState } from "react";
-import { ModalGenerico } from "./ModalGenerico";
+import ModalGenerico from "../ModalGenerico";
+import tip1 from "../../html/tips/proyectos-personales/tip1.html?raw";
+import tip2 from "../../html/tips/proyectos-personales/tip2.html?raw";
+import tip3 from "../../html/tips/proyectos-personales/tip3.html?raw";
+import tip4 from "../../html/tips/proyectos-personales/tip4.html?raw";
 
-import tip1 from "../../html/tips/autoestima-cuidado-personal/tip1.html?raw";
-import tip2 from "../../html/tips/autoestima-cuidado-personal/tip2.html?raw";
-import tip3 from "../../html/tips/autoestima-cuidado-personal/tip3.html?raw";
-import tip4 from "../../html/tips/autoestima-cuidado-personal/tip4.html?raw";
-import tip5 from "../../html/tips/autoestima-cuidado-personal/tip5.html?raw";
-
-const ModalAutoestimaCuidadoPersonal = () => {
+const ModalProyectosPersonales = () => {
   const [show, setShow] = useState(false);
   const [selectedTip, setSelectedTip] = useState(tip1);
 
   const tips = [
-    { label: "Dedicate tiempo todos los días", content: tip1 },
-    { label: "Aprende a decir NO", content: tip2 },
-    { label: "Cuida tu cuerpo", content: tip3 },
-    { label: "Practica la gratitud diaria", content: tip4 },
-    { label: "Habla contigo", content: tip5 },
+    { label: "Empieza pequeño, pero empieza ya", content: tip1 },
+    { label: "Conecta tu proyecto con otras personas", content: tip2 },
+    { label: "Documenta tu proceso desde el inicio", content: tip3 },
+    { label: "Establece un sistema", content: tip4 },
   ];
 
   return (
     <section className="tips-section">
       {/* Botón para abrir el modal */}
       <button className="open-modal-btn" onClick={() => setShow(true)}>
-        Autoestima y Cuidado Personal
+        Proyectos Personales
       </button>
 
       <ModalGenerico
         show={show}
         handleClose={() => setShow(false)}
-        title="Autoestima y Cuidado Personal"
+        title="Proyectos Personales"
         body={
           <div className="html-content">
             <div className="tip-buttons">
@@ -53,4 +50,4 @@ const ModalAutoestimaCuidadoPersonal = () => {
     </section>
   );
 };
-export default ModalAutoestimaCuidadoPersonal;
+export default ModalProyectosPersonales;

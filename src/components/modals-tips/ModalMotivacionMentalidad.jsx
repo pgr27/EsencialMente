@@ -1,37 +1,32 @@
 import React, { useState } from "react";
-import { ModalGenerico } from "./ModalGenerico";
+import ModalGenerico from "../ModalGenerico";
 
-import tip1 from "../../html/tips/red-apoyo/tip1.html?raw";
-import tip2 from "../../html/tips/red-apoyo/tip2.html?raw";
-import tip3 from "../../html/tips/red-apoyo/tip3.html?raw";
-import tip4 from "../../html/tips/red-apoyo/tip4.html?raw";
-import tip5 from "../../html/tips/red-apoyo/tip5.html?raw";
-import tip6 from "../../html/tips/red-apoyo/tip6.html?raw";
+import tip1 from "../../html/tips/motivacion-mentalidad/tip1.html?raw";
+import tip2 from "../../html/tips/motivacion-mentalidad/tip2.html?raw";
+import tip3 from "../../html/tips/motivacion-mentalidad/tip3.html?raw";
+import tip4 from "../../html/tips/motivacion-mentalidad/tip4.html?raw";
 
-const ModalRedApoyo = () => {
+const ModalMotivacionMentalidad = () => {
   const [show, setShow] = useState(false);
   const [selectedTip, setSelectedTip] = useState(tip1);
 
   const tips = [
-    { label: "Rodéate de personas que te hagan sentir bien", content: tip1 },
-    { label: "Construye un entorno que te impulse", content: tip2 },
-    { label: "Aprende a pedir ayuda", content: tip3 },
-    { label: "Sé selectivo con la energía que recibes y das", content: tip4 },
-    { label: "Ten círculos diferentes", content: tip5 },
-    { label: "Crea tu red de apoyo", content: tip6 },
+    { label: "Define tu “por qué”", content: tip1 },
+    { label: "Micro-victorias", content: tip2 },
+    { label: "Visualiza tu meta y el proceso", content: tip3 },
+    { label: "Cambia el diálogo interno", content: tip4 },
   ];
-
   return (
     <section className="tips-section">
       {/* Botón para abrir el modal */}
       <button className="open-modal-btn" onClick={() => setShow(true)}>
-        Red de Apoyo
+        Motivación y Mentalidad
       </button>
 
       <ModalGenerico
         show={show}
         handleClose={() => setShow(false)}
-        title="Red de Apoyo"
+        title="Motivación y Mentalidad"
         body={
           <div className="html-content">
             <div className="tip-buttons">
@@ -55,4 +50,5 @@ const ModalRedApoyo = () => {
     </section>
   );
 };
-export default ModalRedApoyo;
+
+export default ModalMotivacionMentalidad;

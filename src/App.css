@@ -1,8 +1,10 @@
+
 /*Estilos Generales*/
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
 
 /*Estilos Navbar*/
 .nav-menu{
@@ -28,7 +30,7 @@ html {
 }
 .category-buttons .btn:hover {
   background: #194c99;
-    transform: scale(1.05);
+  transform: scale(1.05);
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
 }
 /*Estilo titulos y descripciones*/
@@ -54,4 +56,41 @@ html {
 .modal-dialog{
   width: 80% !important;
   max-width: none !important;
+}
+.separator {
+  width: 60%;
+  margin: 30px auto;
+  border: none;
+  border-top: 2px solid #1f4a7a;
+}
+.separatorModulos {
+  width: 30%;
+  margin: 10px auto;
+  border: none;
+  border-top: 1px solid #1f4a7a;
+}
+.descripcion {
+  margin: 20px auto;      /* centra horizontalmente */
+  padding: 20px;          /* espacio interno */
+  text-align: center;     /* texto centrado */
+  font-size: 1.1rem;      /* tamaño agradable */
+  line-height: 1.6;       /* buena separación entre líneas */
+  background-color: #ffffff;  /* fondo blanco */
+  border-radius: 12px;    /* bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* sombra elegante */
+  color: #333333;         /* texto oscuro */
+  font-family: "Roboto", sans-serif; /* tipografía moderna */
+}
+.descripcion-intro{
+width:90%;       /* limita el ancho para que sea más legible */
+}
+.descripcion-texto{
+  max-width: 700px;       /* limita el ancho para que sea más legible */
+
+}
+.descripcion-texto h2, 
+.descripcion-texto h3 {
+  margin-bottom: 10px;
+  color: #1f4a7a; /* color acorde con tus separadores */
+  font-weight: bold;
 }

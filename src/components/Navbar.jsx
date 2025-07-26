@@ -7,7 +7,6 @@ const Navbar = () => {
         <a href="#inicio">Inicio</a>
         <a href="#tips">Tips que funcionan</a>
         <a href="#planificador">Planificador</a>
-        <a href="#recomendaciones">Recomendaciones</a>
         <a href="#finanzas">Finanzas</a>
         <a href="#sesion">Iniciar Sesión</a>
       </div>
