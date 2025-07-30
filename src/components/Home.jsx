@@ -6,8 +6,6 @@ import Finanzas from "./Finanzas";
 const Home = () => {
   return (
     <main>
-      <section id="inicio">EsencialMente</section>
-      <section id="inicio">Inicio</section>
       <section>
         <Tips />
       </section>{" "}

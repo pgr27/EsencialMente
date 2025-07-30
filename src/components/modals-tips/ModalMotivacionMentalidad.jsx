@@ -19,7 +19,7 @@ const ModalMotivacionMentalidad = () => {
   return (
     <section className="tips-section">
       {/* Botón para abrir el modal */}
-      <button className="open-modal-btn" onClick={() => setShow(true)}>
+      <button className="category-buttons btn" onClick={() => setShow(true)}>
         Motivación y Mentalidad
       </button>
 
@@ -40,10 +40,12 @@ const ModalMotivacionMentalidad = () => {
                 </button>
               ))}
             </div>
-            <div
-              className="tip-content"
-              dangerouslySetInnerHTML={{ __html: selectedTip }}
-            />
+            <div className="descripcion descripcion-texto">
+              <div
+                className="tip-content"
+                dangerouslySetInnerHTML={{ __html: selectedTip }}
+              />
+            </div>
           </div>
         }
       />

@@ -22,7 +22,7 @@ export const ModalGestionTiempo = () => {
   return (
     <section className="tips-section">
       {/* Botón para abrir el modal */}
-      <button className="open-modal-btn" onClick={() => setShow(true)}>
+      <button className="category-buttons btn" onClick={() => setShow(true)}>
         Gestión del Tiempo
       </button>
 
@@ -43,10 +43,12 @@ export const ModalGestionTiempo = () => {
                 </button>
               ))}
             </div>
-            <div
-              className="tip-content"
-              dangerouslySetInnerHTML={{ __html: selectedTip }}
-            />
+            <div className="descripcion descripcion-texto">
+              <div
+                className="tip-content"
+                dangerouslySetInnerHTML={{ __html: selectedTip }}
+              />
+            </div>
           </div>
         }
       />

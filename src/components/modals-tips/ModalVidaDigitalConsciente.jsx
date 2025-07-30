@@ -31,7 +31,7 @@ const ModalVidaDigitalConsciente = () => {
   return (
     <section className="tips-section">
       {/* Botón para abrir el modal */}
-      <button className="open-modal-btn" onClick={() => setShow(true)}>
+      <button className="category-buttons btn" onClick={() => setShow(true)}>
         Vida Digital Consciente
       </button>
 
@@ -52,10 +52,12 @@ const ModalVidaDigitalConsciente = () => {
                 </button>
               ))}
             </div>
-            <div
-              className="tip-content"
-              dangerouslySetInnerHTML={{ __html: selectedTip }}
-            />
+            <div className="descripcion descripcion-texto">
+              <div
+                className="tip-content"
+                dangerouslySetInnerHTML={{ __html: selectedTip }}
+              />
+            </div>
           </div>
         }
       />

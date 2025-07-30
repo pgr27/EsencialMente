@@ -59,10 +59,12 @@ const Modulo3 = () => {
                 </button>
               ))}
             </div>
-            <div
-              className="tip-content"
-              dangerouslySetInnerHTML={{ __html: selectedTip }}
-            />
+            <div className="descripcion descripcion-texto">
+              <div
+                className="tip-content"
+                dangerouslySetInnerHTML={{ __html: selectedTip }}
+              />
+            </div>
           </div>
         }
       />

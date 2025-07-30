@@ -24,7 +24,7 @@ export const ModalEstudioEfectivo = () => {
   return (
     <section className="tips-section">
       {/* Botón para abrir el modal */}
-      <button className="open-modal-btn" onClick={() => setShow(true)}>
+      <button className="category-buttons btn" onClick={() => setShow(true)}>
         Estudio Efectivo
       </button>
 
@@ -45,10 +45,12 @@ export const ModalEstudioEfectivo = () => {
                 </button>
               ))}
             </div>
-            <div
-              className="tip-content"
-              dangerouslySetInnerHTML={{ __html: selectedTip }}
-            />
+            <div className="descripcion descripcion-texto">
+              <div
+                className="tip-content"
+                dangerouslySetInnerHTML={{ __html: selectedTip }}
+              />
+            </div>
           </div>
         }
       />
